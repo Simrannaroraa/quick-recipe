@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Recipe App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QUICK RECIPE</h1>
+        <p>Enter your ingredients, separated by commas, and I'll find some dish ideas!</p>
+        
+        <div class="input-section">
+            <input type="text" id="ingredients-input" placeholder="e.g., chicken, onion, tomato, pasta">
+            <button id="submit-btn">Find Dishes</button>
+        </div>
+
+        <div class="filter-section">
+            <label for="difficulty-filter">Difficulty:</label>
+            <select id="difficulty-filter">
+                <option value="all">All</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+
+            <label for="cuisine-filter">Cuisine:</label>
+            <select id="cuisine-filter">
+                <option value="all">All</option>
+                <option value="Italian">Italian</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Asian">Asian</option>
+                <option value="Indian">Indian</option>
+                <option value="American">American</option>
+                <option value="Mediterranean">Mediterranean</option>
+            </select>
+            
+            <label for="time-filter">Max Time:</label>
+            <select id="time-filter">
+                <option value="all">All</option>
+                <option value="30 mins">30 mins</option>
+                <option value="60 mins">60 mins</option>
+                <option value="90+ mins">90+ mins</option>
+            </select>
+        </div>
+
+        <div id="loading-spinner" class="hidden"></div>
+        <div id="results-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
